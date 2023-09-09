@@ -5,6 +5,8 @@ import Section1 from '../components/Section1'
 import Section2 from '../components/Section2'
 import Section3 from '../components/Section3'
 import Section4 from '../components/Section4'
+import Section5 from '../components/Section5'
+import Footer from '../components/Footer'
 export default class Home extends Component {
   componentDidMount() {
     const scrollTop = document.getElementById("scrolltop")
@@ -40,6 +42,8 @@ export default class Home extends Component {
         <Section3/>
         {/* section service */}
         <Section4/>
+        <Section5/>
+        <Footer/>
         {/*<!-- scroll top icon --> */}
         <div id="scrolltop">
           <a href="#top" class="top_button">

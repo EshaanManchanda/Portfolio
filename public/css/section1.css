@@ -1,0 +1,30 @@
+/* section 1 coding Experience */
+#section1{
+    background-image: url(../res/img/background.png);
+    background-size:cover;
+    padding: 80px;
+    height:940px;
+}
+#section1>h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+#section1-div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 250px;
+}
+.expDiv{
+    margin: 10px;
+}
+#section1-div h5{
+    text-transform:uppercase;
+    margin: 8px 0;
+}
+#section1-div2{
+    width: 100vw;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

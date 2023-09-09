@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@use postcss-nested;
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+*{
+    scroll-behavior: smooth;
+}
+body {
+    /* background-color: rgb(0, 0, 33); */
+    background-color: #06002E;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+a{
+    text-decoration: none;
+    color: deep;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+/* button or link hover effects */
+.gradient-underline {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+}
+
+.gradient-underline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg, deepskyblue, deeppink);
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.gradient-underline:hover::before {
+    width: 100%;
+
+}
+.button-skw{
+    display: inline-block;
+    color: #fff;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 20px 50px;
+    border: 3px solid 
+    #3cbce3;
+    border-radius: 10px;
+}
+
+.button-skw:hover{
+    animation: pulsate 1s 
+    ease-in-out;
+}
+.button-border{
+    display: inline-block;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    padding: 5px 20px;
+    border: 3px solid #3cbce3;
+    transform: translate(-50%, -50%);
+}
+.button-border::before,
+.button-border::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: all .5s ease-in;
+}
+
+.button-border::before{
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+.button-border::after{
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+.button-border:hover::before,
+.button-border:hover::after{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
+/* ======================== */
+
+.cta {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 4px));
+    width: 45px;
+    height: 45px;
+    background: #dc143c;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), width .25s cubic-bezier(0, 0, .5, 2);
+    z-index: -1;
+}
+
+.cta:hover::before {
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0, 0, .5, 2), width .25s .25s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta i {
+    margin-left: 5px;
+    transition: transform .25s .4s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta:hover i {
+    transform: translateX(3px);
+}
+@keyframes pulsate {
+    0%{
+        box-shadow: 
+        0 0 25px #5ddcff,
+        0 0 50px #5ddcff;
+    }
+}
+/* ======================== */
+
+.button-rgbB {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 3px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden; /* Hides the overflowing ::before pseudo-element. */
+}
+
+.button-rgbB::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /*Making the width double the size of the parent since we are going to be animation the transform: translateX() to the left. */
+    height: 100%;
+    background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+    background-size: 50% 100%;
+    border-radius: inherit;
+}
+
+.button-rgbB:hover::before {
+    animation: animate_border .75s linear infinite;
+}
+
+.button-rgbB span {
+    display: block;
+    background-color: #000;
+    padding: 13px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes animate_border {
+    to {
+        transform: translateX(-50%)
+    }
+}
+/* =============================== */
+#scrolltop{
+    display:flex;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s , opacity 0.5s ease-in;
+    position:fixed;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    height: 32px;
+    width: 32px;
+    font-size: 25px;
+    height: 50px;
+    border-radius: 20px;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.4);
+}
+.top_button{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 20px;
+    color: #ffffff;
+}
+.top_button:hover{
+    color: rgba(0, 0, 0, 0.4);
+}

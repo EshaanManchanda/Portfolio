@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.skills-bar {
+    width: 600px;
+    padding: 25px 30px;
+}
+
+.skills-bar .bar {
+    margin: 20px 0;
+}
+
+.skills-bar .bar:first-child {
+    margin-top: 0px;
+}
+
+.skills-bar .bar .info {
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.skills-bar .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.skills-bar .bar .progress-line {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+
+}
+
+.bar .progress-line span {
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(90deg, deepskyblue, deeppink);
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    border-radius: 10px;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    height: 0;
+    top: -10px;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #ffffff;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.bar .progress-line span::after {
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #06002E;
+    font-size: 12px;
+    font-weight: 500;
+    background: #ffffff;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progress-line.frontend span::after {
+    content: "50%";
+}
+
+.progress-line.backend span::after {
+    content: "60%";
+}
+
+.progress-line.hindi span::after {
+    content: "95%";
+}
+
+.progress-line.english span::after {
+    content: "75%";
+}
+
+.progress-line.frontend span {
+    width: 50%;
+}
+
+.progress-line.backend span {
+    width: 60%;
+}
+
+.progress-line.hindi span {
+    width: 95%;
+}
+
+.progress-line.english span {
+    width: 75%;
+}
+
+#section2 {
+    padding: 80px 80px 80px;
+    height: 945px;
+}
+
+#section2>div h1 {
+    font-size: 3rem;
+}
+
+#section2-skillbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+.info>h4{
+    text-decoration: underline;
+}

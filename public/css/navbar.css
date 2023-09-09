@@ -1,0 +1,28 @@
+nav{
+    display: flex;
+    position: absolute;
+    left: 10rem;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+.left{
+    font-size: 1.5rem;
+
+}
+.right{
+    margin-left: 35vw;
+}
+.right>ul{
+    display: flex;
+    justify-content: space-around;
+}
+.right>ul>a{
+    font-weight: 500;
+    text-decoration: none;
+}
+nav ul li{
+    color: white !important;
+    list-style: none;
+    margin: 0 23px;
+}

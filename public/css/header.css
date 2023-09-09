@@ -1,0 +1,19 @@
+header{
+    background-image: url('../res/img/Home.png');
+    background-size:cover;
+    display:-webkit-box;
+    height: 940px;;
+}
+#header-div{
+    margin: 45vh 0 0 40vw;
+    width: 55vw;
+    height: 300px;
+    padding-left: 80px;
+}
+#header-div>h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+#header-div .button-skw{
+    margin: 50px 10px;
+}

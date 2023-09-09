@@ -1,0 +1,13 @@
+/* section 4 services */
+#section4{
+    padding: 80px;
+    height: 850px;
+}
+#section4>:first-child{
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
